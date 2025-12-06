@@ -1,4 +1,4 @@
-/* GLOBAL COLOR VARIABLES -----------------------------------------*/
+
 :root {
     --text: #0f0f10;
     --primary: #dfb52a;
@@ -7,7 +7,7 @@
     --accent: #e6ac56;
 }
 
-/* BODY ------------------------------------------------------------*/
+
 body {
     background: var(--background);
     color: var(--text);
@@ -15,7 +15,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HEADER ----------------------------------------------------------*/
+
 .top-header {
     display: flex;
     align-items: center;
@@ -57,7 +57,7 @@ body {
     color: var(--background);
 }
 
-/* NAVIGATION ------------------------------------------------------*/
+
 .main-nav ul {
     list-style: none;
     display: flex;
@@ -80,7 +80,7 @@ body {
 
 
 .hero {
-    height: 800px;
+    height: 400px;  /* reduced from 800px */
     width: 100%;
     overflow: hidden;
     border-bottom: 1px solid #000;
@@ -92,7 +92,7 @@ body {
     object-fit: cover;
 }
 
-/* ABOUT SECTION ----------------------------------------------------*/
+
 .about {
     display: flex;
     flex-wrap: wrap;
@@ -116,7 +116,7 @@ body {
     font-size: 1.3rem;
 }
 
-/* NEWSLETTER --------------------------------------------------------*/
+
 .newsletter {
     border: 1px solid #000;
     margin: 20px;
@@ -171,7 +171,7 @@ body {
     box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
 }
 
-/* REVIEWS -----------------------------------------------------------*/
+
 .reviews {
     border: 1px solid #000;
     margin: 20px;
@@ -231,7 +231,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* FOOTER -----------------------------------------------------------*/
+
 .footer {
     text-align: center;
     padding: 15px;
@@ -241,7 +241,7 @@ body {
     border-radius: 10px 10px 0 0;
 }
 
-/* RESPONSIVE ADJUSTMENTS ------------------------------------------*/
+
 @media (max-width: 600px) {
     .newsletter-grid {
         grid-template-columns: 1fr;
@@ -268,3 +268,105 @@ body {
         align-items: center;
     }
 }
+/* PAGE HERO */
+.page-hero {
+  background: var(--accent);
+  padding: 40px;
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 30px;
+}
+
+/* INDOOR FUN ACTIVITY GRID */
+.activity-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px 40px;
+}
+
+.activity-box {
+  background: white;
+  border: 2px solid var(--primary);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.activity-box h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.activity-box a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+/* CONTACT PAGE */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 20px 40px 40px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  color: var(--primary);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: var(--secondary);
+  
+}
+.video-section {
+    margin: 20px auto;       /* centers the whole section */
+    padding: 20px;
+    background: var(--secondary);
+    border-radius: 10px;
+    text-align: center;      /* centers the heading */
+    border: 1px solid #000;
+    max-width: 900px;        /* keeps it centered and not too wide */
+}
+
+.video-section iframe,
+.video-section video {
+    display: block;          /* allows margin auto to work */
+    margin: 0 auto;          /* centers the video */
+    width: 100%;
+    max-width: 600px;        /* your preferred size */
+    height: 330px;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+}
+
